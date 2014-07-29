@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -5,14 +6,7 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 body {
-    margin: 0;
-    background: '../img/skyline.jpg';
-    background-size: 1440px 800px;
-    background-repeat:no-repeat;
-  display: compact;
-    font: 13px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
-
-
+  margin: 0;
 }
 article,
 aside,
@@ -888,7 +882,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #333333;
@@ -6169,4 +6163,64 @@ button.close {
   .hidden-print {
     display: none !important;
   }
+}
+/* Custom styles for homepage */
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+}
+#home-container {
+  background-color: #000000;
+  background-image: url('../img/bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+#home-container .content {
+  width: 25%;
+  position: relative;
+  top: 50%;
+  margin: auto;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  color: white;
+  z-index: 3;
+  text-align: center;
+}
+#home-container .content h1 {
+  margin: 0;
+}
+#rectangle1 {
+  width: 26vw;
+  height: 23vw;
+  background-color: rgba(24, 165, 222, 0.77);
+  z-index: 1;
+  -webkit-transform: rotate(60deg);
+  -ms-transform: rotate(60deg);
+  -o-transform: rotate(60deg);
+  transform: rotate(60deg);
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+#rectangle2 {
+  width: 26vw;
+  height: 23vw;
+  background-color: rgba(255, 243, 51, 0.77);
+  z-index: 2;
+  -webkit-transform: rotate(60deg);
+  -ms-transform: rotate(60deg);
+  -o-transform: rotate(60deg);
+  transform: rotate(60deg);
+  margin: auto;
 }
