@@ -2778,12 +2778,14 @@ fieldset[disabled] .btn {
   color:white;
 }
 .btn-default {
+  height: 3.5em;
+  width: 12em; 
   color: #333333;
-  font-size: 2em;
+  font-size: 100%;
   background-color: #ffff00;
   border: none;
 }
-.btn-default:hover,
+/*.btn-default:hover,*/
 .btn-default:focus,
 .btn-default:active,
 .btn-default.active,
