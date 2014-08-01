@@ -2753,10 +2753,35 @@ fieldset[disabled] .btn {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
+.round-button {
+  width:17%;      /* determines the size of the circle */
+  color: #333333;
+  background: none;
+  border: none;
+}
+.round-button:after {
+  content: "";
+  display: block; /* actually appends the circle */
+  width: 100%;    /* makes it an oval or a circle */
+  height:0;
+  padding-bottom: 100%;   /* can make it an oval in the other direction */
+  background: #ffff00;    /* color of the circle */
+  border-radius: 50%;     /* can turn the circle into a squarey circle */
+}
+.round-button div {
+  float:left;
+  width:100%;
+  padding-top:50%;
+  line-height:1em;
+  margin-top:-0.5em;
+  text-align:center;
+  color:white;
+}
 .btn-default {
   color: #333333;
-  background-color: #ffffff;
-  border-color: #cccccc;
+  font-size: 2em;
+  background-color: #ffff00;
+  border: none;
 }
 .btn-default:hover,
 .btn-default:focus,
@@ -2787,7 +2812,7 @@ fieldset[disabled] .btn-default:active,
 .btn-default.disabled.active,
 .btn-default[disabled].active,
 fieldset[disabled] .btn-default.active {
-  background-color: #ffffff;
+  background-color: #ffff00;
   border-color: #cccccc;
 }
 .btn-default .badge {
@@ -6173,7 +6198,7 @@ body {
 }
 #home-container {
   background-color: #000000;
-  background-image: url('../img/bg.jpg');
+  background-image: url('../img/skyline.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
