@@ -2756,6 +2756,7 @@ fieldset[disabled] .btn {
   color: #333333;
   background: none;
   border: none;
+  background-image: url('../img/twitter.jpg')
 }
 .round-button:after {
   content: "";
@@ -2765,17 +2766,6 @@ fieldset[disabled] .btn {
   padding-bottom: 100%;   /* can make it an oval in the other direction */
   background: #ffff00;    /* color of the circle */
   border-radius: 50%;     /* can turn the circle into a squarey circle */
-}
-.round-button div {
-  float:left;
-  width:100%;
-  padding-top:50%;
-  border: 1px solid;
-  border-radius: 2em 1em 4em / 0.5em 3em;
-  line-height:1em;
-  margin-top:-0.5em;
-  text-align:center;
-  color:white;
 }
 .btn-default {
   color: #333333;
@@ -6220,6 +6210,35 @@ body {
 }
 #home-container .content h1 {
   margin: 0;
+}
+#faq-container {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(24, 165, 222, 0.77);
+  z-index: -1;
+}
+#faq-container .content {
+  width: 50%;
+  top: 10%;
+  position: relative;
+  text-align: center;
+  margin: auto;
+  transform: translate(0, -50%);
+}
+#faq-container .content h1 {
+    margin: 0;
+}
+#answer-question-block {
+  width: 15vw;
+  height: 15vw;
+  background-color: rgba(255, 243, 51, 0.3);
+  z-index: 1;
+}
+#answer-question-block h1 {
+    text-align: left;
+}
+#answer-question-block h2 {
+    text-align: left;
 }
 #countdown-box {
   width: 25vw;
