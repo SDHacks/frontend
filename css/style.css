@@ -6213,18 +6213,19 @@ body {
 }
 #black-divider-bar {
   width: 100%;
-  height: 10%;
+  height: 15%;
   border: 2px solid;
-  border-radius: 25px;
-  background-color: #000000;
+  border-color: black;
+  background-color: #ffffff;
   z-index: -1;
 }
 #black-divider-bar .content {
   text-align: center;
   top: 50%;
   margin: auto;
-  color: white;
-  -webkit-transform: translate(0, 20%);
+  color: black;
+  z-index: 3;
+  -webkit-transform: translate(0, 50%);
   -ms-transform: translate(0, -50%);
   -o-transform: translate(0, -50%);
 }
@@ -6240,9 +6241,7 @@ body {
   font-size: large;
   color: white;
   width: 100%;
-  height: 90%;
-  border: 2px solid;
-  border-radius: 25px;
+  height: 100%;
   z-index: -1;
 }
 #faq-container .content {
@@ -6251,36 +6250,50 @@ body {
   position: relative;
   margin: auto;
   transform: translate(0, -50%);
+  z-index: 3;
 }
-#faq-container .content h1 {
+#faq-container h1 {
     margin: 0;
 }
-#answer-question-block {
-  width: 15vw;
-  height: 15vw;
-  z-index: 1;
+#stats-container {
+  width: 100%;
+  height: 100%;
+  background-color: blue;
 }
-#aq-rectangle {
-  width: 26vw;
-  height: 23vw;
-  background-color: rgba(24, 165, 222, 0.77);
-  z-index: 1;
-  -webkit-transform: rotate(60deg);
-  -ms-transform: rotate(60deg);
-  -o-transform: rotate(60deg);
-  transform: rotate(60deg);
-  margin: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+#stats-container h1 {
+    margin: 0;
 }
-#answer-question-block h1 {
-    text-align: left;
+#hack-camp-container {
+  width: 100%;
+  height: 100%;
+  background-color: red;
 }
-#answer-question-block h2 {
-    text-align: left;
+#hack-camp-container h1 {
+    margin: 0;
+}
+#sponsors-container {
+  width: 100%;
+  height: 100%;
+  background-color: yellow;
+}
+#sponsors-container h1 {
+    margin: 0;
+}
+#sdhack-team-container {
+  width: 100%;
+  height: 100%;
+  background-color: purple;
+}
+#sdhack-team-container h1 {
+    margin: 0;
+}
+#org-list-container {
+  width: 100%;
+  height: 100%;
+  background-color: grey;
+}
+#org-list-container h1 {
+    margin: 0;
 }
 #countdown-box {
   width: 25vw;
@@ -6319,4 +6332,16 @@ body {
   -o-transform: rotate(60deg);
   transform: rotate(60deg);
   margin: auto;
+}
+#faq-rect {
+  width: 50vw;
+  height: 23vw;
+  background-color: rgba(24, 165, 222, 0.30);
+  z-index: 1;
+  margin: auto;
+  position: absolute;
+  /*top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;*/
 }
