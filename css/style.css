@@ -6191,14 +6191,14 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 100%;
+  height: 120%;
   width: 100%;
   z-index: -1;
 }
 #home-container .content {
   width: 25%;
   position: relative;
-  top: 50%;
+  top: 40%;
   margin: auto;
   -webkit-transform: translate(0, -50%);
   -ms-transform: translate(0, -50%);
@@ -6211,7 +6211,7 @@ body {
 #home-container .content h1 {
   margin: 0;
 }
-#black-divider-bar {
+#white-divider-bar {
   width: 100%;
   height: 15%;
   border: 2px solid;
@@ -6219,7 +6219,7 @@ body {
   background-color: #ffffff;
   z-index: -1;
 }
-#black-divider-bar .content {
+#white-divider-bar .content {
   text-align: center;
   top: 50%;
   margin: auto;
@@ -6229,8 +6229,20 @@ body {
   -ms-transform: translate(0, -50%);
   -o-transform: translate(0, -50%);
 }
-#black-divider-bar .content h1 {
+#white-divider-bar .content h1 {
   margin: 0;
+}
+#stats-container {
+  width: 100%;
+  height: 50%;
+  background-image: url('../img/san-diego-convention-center.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: rgba(24, 165, 222, 0.77);
+}
+#stats-container h1 {
+    margin: 0;
 }
 #faq-container {
   background-image: url('../img/geisel.jpg');
@@ -6244,24 +6256,29 @@ body {
   height: 100%;
   z-index: -1;
 }
-#faq-container .content {
-  width: 50%;
-  top: 50%;
-  position: relative;
-  margin: auto;
-  transform: translate(0, -50%);
-  z-index: 3;
-}
 #faq-container h1 {
     margin: 0;
 }
-#stats-container {
+#black-divider-bar {
   width: 100%;
-  height: 100%;
-  background-color: blue;
+  height: 15%;
+  border: 2px solid;
+  border-color: black;
+  background-color: #000000;
+  z-index: -1;
 }
-#stats-container h1 {
-    margin: 0;
+#black-divider-bar .content {
+  text-align: center;
+  top: 50%;
+  margin: auto;
+  color: white;
+  z-index: 3;
+  -webkit-transform: translate(0, 50%);
+  -ms-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+}
+#black-divider-bar .content h1 {
+  margin: 0;
 }
 #hack-camp-container {
   width: 100%;
@@ -6333,15 +6350,18 @@ body {
   transform: rotate(60deg);
   margin: auto;
 }
-#faq-rect {
-  width: 50vw;
-  height: 23vw;
+#faq-rect-1 {
+  width: 30vw;
+  height: 10vw;
   background-color: rgba(24, 165, 222, 0.30);
   z-index: 1;
   margin: auto;
-  position: absolute;
-  /*top: 0;
+  position: static;
+  -webkit-transform: translate(0, 50%);
+  -ms-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  top: 100;
   left: 0;
   bottom: 0;
-  right: 0;*/
+  right: 0;
 }
