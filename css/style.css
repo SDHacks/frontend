@@ -6211,6 +6211,39 @@ body {
 #home-container .content h1 {
   margin: 0;
 }
+#black-divider-bar {
+  width: 100%;
+  height: 15%;
+  border: 2px solid;
+  border-color: black;
+  background-color: #000000;
+  z-index: -1;
+}
+#black-divider-bar .content {
+  text-align: center;
+  top: 50%;
+  margin: auto;
+  color: white;
+  z-index: 3;
+  -webkit-transform: translate(0, 50%);
+  -ms-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+}
+#black-divider-bar .content h1 {
+  margin: 0;
+}
+#stats-container {
+  width: 100%;
+  height: 50%;
+  background-image: url('../img/san-diego-convention-center.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: rgba(24, 165, 222, 0.77);
+}
+#stats-container h1 {
+    margin: 0;
+}
 #white-divider-bar {
   width: 100%;
   height: 15%;
@@ -6232,18 +6265,6 @@ body {
 #white-divider-bar .content h1 {
   margin: 0;
 }
-#stats-container {
-  width: 100%;
-  height: 50%;
-  background-image: url('../img/san-diego-convention-center.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-color: rgba(24, 165, 222, 0.77);
-}
-#stats-container h1 {
-    margin: 0;
-}
 #faq-container {
   background-image: url('../img/geisel.jpg');
   background-repeat: no-repeat;
@@ -6258,27 +6279,6 @@ body {
 }
 #faq-container h1 {
     margin: 0;
-}
-#black-divider-bar {
-  width: 100%;
-  height: 15%;
-  border: 2px solid;
-  border-color: black;
-  background-color: #000000;
-  z-index: -1;
-}
-#black-divider-bar .content {
-  text-align: center;
-  top: 50%;
-  margin: auto;
-  color: white;
-  z-index: 3;
-  -webkit-transform: translate(0, 50%);
-  -ms-transform: translate(0, -50%);
-  -o-transform: translate(0, -50%);
-}
-#black-divider-bar .content h1 {
-  margin: 0;
 }
 #hack-camp-container {
   width: 100%;
@@ -6350,10 +6350,22 @@ body {
   transform: rotate(60deg);
   margin: auto;
 }
+#yellow-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 243, 51, 0.2);
+}
+#blue-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(24, 165, 222, 0.05);
+}
 #faq-rect-1 {
   width: 30vw;
   height: 10vw;
-  background-color: rgba(24, 165, 222, 0.30);
+  background-color: rgba(24, 165, 222, 0.50);
+  border: 3px solid black;
+  /*box-shadow: 10px 10px 5px #000000;*/
   z-index: 1;
   margin: auto;
   position: static;
