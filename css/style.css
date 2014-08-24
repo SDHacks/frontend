@@ -6226,8 +6226,8 @@ body {
   color: white;
   z-index: 3;
   -webkit-transform: translate(0, 50%);
-  -ms-transform: translate(0, -50%);
-  -o-transform: translate(0, -50%);
+  -ms-transform: translate(0, 50%);
+  -o-transform: translate(0, 50%);
 }
 #black-divider-bar .content h1 {
   margin: 0;
@@ -6259,8 +6259,8 @@ body {
   color: black;
   z-index: 3;
   -webkit-transform: translate(0, 50%);
-  -ms-transform: translate(0, -50%);
-  -o-transform: translate(0, -50%);
+  -ms-transform: translate(0, 50%);
+  -o-transform: translate(0, 50%);
 }
 #white-divider-bar .content h1 {
   margin: 0;
@@ -6312,17 +6312,6 @@ body {
 #org-list-container h1 {
     margin: 0;
 }
-#countdown-box {
-  width: 25vw;
-  height: 4vw;
-  background-color: rgba(255, 243, 51, 0.3);
-  margin: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 100;
-  right: 1000;
-}
 #rectangle1 {
   width: 26vw;
   height: 23vw;
@@ -6334,6 +6323,7 @@ body {
   transform: rotate(60deg);
   margin: auto;
   position: absolute;
+  border: 3px solid black;
   top: 0;
   left: 0;
   bottom: 0;
@@ -6349,6 +6339,7 @@ body {
   -o-transform: rotate(60deg);
   transform: rotate(60deg);
   margin: auto;
+  border: 3px solid black;
 }
 #yellow-overlay {
   width: 100%;
@@ -6358,7 +6349,7 @@ body {
 #blue-overlay {
   width: 100%;
   height: 100%;
-  background-color: rgba(24, 165, 222, 0.05);
+  background-color: rgba(24, 165, 222, 0.6);
 }
 #faq-rect-1 {
   width: 30vw;
