@@ -67,18 +67,6 @@
               font: bold 48px monospace;
             }
 
-            .enter {
-              fill: green;
-            }
-
-            .update {
-              fill: #333;
-            }
-
-            .exit {
-              fill: brown;
-            }
-
         </style>
 
         <body>
@@ -98,26 +86,26 @@
                 ["t","w","e","n","t","y","-","f","o","u","r"," ","h","o","u","r","s"],
                 ["s","a","n"," ","d","i","e","g","o",","," ","c","a","l","i","f","o","r","n","i","a"],
                 ["o","v","e","r"," ","x","y","z"," ","c","o","l","l","e","g","e","s"," ","r","e","p","r","e","s","e","n","t","e","d"],
-                ["o","v","e","r"," ","x","y","z"," ","i","n"," ","p","r","i","z","e","s"],
+                ["x","y","z"," ","i","n"," ","p","r","i","z","e","s"],
                 ["f","r","e","e"," ","s","e","m","i","n","a","r"," ","f","o","r"," ","n","e","w"," ","h","a","c","k","e","r","s"],
-                ["o","v","e","r"," ","x","y","z"," ","b","i","g","-","n","a","m","e"," ","s","p","o","n","s","o","r","s"]
+                ["x","y","z"," ","b","i","g","-","n","a","m","e"," ","s","p","o","n","s","o","r","s"]
             ],
             flip_flop = -1,
             rotation_index = 0;
 
         // The initial display.
-        update(alphabet);
+        updateText(alphabet);
 
         // Grab a random sample of letters from the alphabet, in alphabetical order.
         setInterval(function() {
 
-            update(shuffle(alphabet)
-              .slice(4, Math.floor(Math.random() * 26))
+            updateText(shuffle(alphabet)
+              .slice(0, Math.floor(Math.random() * 26))
               .sort());
 
         }, 2000);
 
-        function update(data) {
+        function updateText(data) {
 
           data = flipFlopData(data);
 
@@ -125,16 +113,16 @@
                   .data(data, function(d) { return d; });
 
           // Update old elements as needed.
-          text.attr("class", "update")
+          text
             .transition()
+              .attr("fill", "black")
               .duration(950)
               .attr("x", function(d, i) { return 100 + i * 32; });
 
           // ENTER
           // Create new elements as needed.
           text.enter().append("text")
-              .attr("class", "enter")
-              .attr("dy", ".35em")
+              .attr("fill", "green")
               .attr("y", -60)
               .attr("x", function(d, i) { return 100 + i * 32; })
               .style("fill-opacity", 1e-6)
@@ -147,7 +135,7 @@
           // EXIT
           // Remove old elements as needed.
           text.exit()
-              .attr("class", "exit")
+              .attr("fill", "brown")
             .transition()
               .duration(750)
               .attr("y", 60)
