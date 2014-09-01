@@ -45,7 +45,7 @@
         <p class="h4">
             Team up with your friends, make<br>
             new ones, and create something<br>
-            new with us at SD Hacks!
+            exciting with us at SD Hacks!
         </p>
 
         <p class="h5">SAN DIEGO CONVENTION CENTER<br>March 31, 2015</p>
@@ -60,31 +60,21 @@
 <!--The bar between the home page and the stats page.-->
 <div id="black-divider-bar">
     <div class="content">
-        <h1><font size="100%">HACK INFORMATION</font></h1>
+        <h1><font size="100%">DETAILS</font></h1>
     </div>
 </div>
 
-<!--The stats page, containing # of hours, $ of prizes, cost.
-<div id="stats-container">
+<!--The stats page, containing # of hours, $ of prizes, cost.-->
+<style>text { font: bold 48px monospace; }</style>
 
-    <div id="blue-overlay">
--->
-        <style>
+<body>
 
-            text {
-              font: bold 48px monospace;
-            }
+    <script src="d3/d3.min.js"></script>
+    <script src="d3/d3.js"></script>
 
-        </style>
+    <script>
 
-        <body>
-        <!--<script src="http://d3js.org/d3.v2.min.js?2.10.1"></script>-->
-        <script src="d3/d3.min.js"></script>
-        <script src="d3/d3.js"></script>
-
-        <script>
-
-        var alphabet = "abcdefghijklmnopqrstuvwxyz".split(""),
+        var ALPHABET = "abcdefghijklmnopqrstuvwxyz".split(""),
             width = 1160,
             height = 300,
             svg = d3.select("body").append("svg")
@@ -92,98 +82,99 @@
                 .attr("height", height)
               .append("g")
                 .attr("transform", "translate(32," + (height / 2) + ")"),
-            rotation = [
-                ["t","w","e","n","ty-four hours"],
-                ["s","a","n"," ","d","i","e","g","o",","," ","c","alifornia"],
-                ["o","v","e","r"," ","x","y","z colleges represented"],
-                ["x","y","z"," ","i","n"," ","p","rizes"],
-                ["s","e","m","i","n","a","r"," ","f","or new hackers"],
-                ["x","y","z"," ","b","i","g","-","n","a","m","e sponsors"]
-            ],
             flip_flop = -1,
-            rotation_index = 0;
+            rotation_index = -1;
 
         // The initial display.
-        updateText(alphabet);
+        updateText(ALPHABET);
 
-        // Grab a random sample of letters from the alphabet, in alphabetical order.
+        // setInterval is a function that is an infinite loop that will call
+        // its contents at a given interval as a second parameter.
         setInterval(function() {
 
-            updateText(shuffle(alphabet)
-              .slice(0, Math.floor(Math.random() * 26))
-              .sort());
+            flip_flop++;
+            updateText(getNewText());
 
         }, 2000);
 
         function updateText(data) {
 
-          data = flipFlopData(data);
+            var text = svg.selectAll("text")
+                    .data(data, function(d) { return d; });
 
-          var text = svg.selectAll("text")
-                  .data(data, function(d) { return d; });
+            // Update old elements as needed.
+            text
+                .attr("fill", "black")
+              .transition().duration(950)
+                .attr("x", function(d, i) {
+                    return 100 + i * 32;
+                });
 
-          // Update old elements as needed.
-          text
-              .attr("fill", "black")
-            .transition().duration(950)
-              .attr("x", function(d, i) {
-                  return 100 + i * 32;
-              });
+            // enter
+            text.enter().append("text")
+                .attr("fill", "green")
+                .attr("y", -60)
+                .attr("x", function(d, i) { return 100 + i * 32; })
+                .style("fill-opacity", 1E-6)
+                .text(function(d) { return d; })
+              .transition().duration(750)
+                .attr("y", 0)
+                .style("fill-opacity", 1);
 
-          // enter
-          text.enter().append("text")
-              .attr("fill", "green")
-              .attr("y", -60)
-              .attr("x", function(d, i) { return 100 + i * 32; })
-              .style("fill-opacity", 1E-6)
-              .text(function(d) { return d; })
-            .transition().duration(750)
-              .attr("y", 0)
-              .style("fill-opacity", 1);
-
-          // exit
-          text.exit()
-              .attr("fill", "brown")
-            .transition().duration(750)
-              .attr("y", 60)
-              .style("fill-opacity", 1E-6)
-              .remove();
+            // exit
+            text.exit()
+                .attr("fill", "brown")
+              .transition().duration(750)
+                .attr("y", 60)
+                .style("fill-opacity", 1E-6)
+                .remove();
         }
 
         // Shuffles the input array, setting data.
-        function shuffle(inputArray) {
+        function shuffleAlphabet() {
 
-            var m = inputArray.length, t, i;
+            var t, i,
+                shuffled = ALPHABET,
+                m = shuffled.length;
 
             while (m) {
                 i = Math.floor(Math.random() * m--);
-                t = inputArray[m],
-                inputArray[m] = inputArray[i],
-                inputArray[i] = t;
+                t = shuffled[m],
+                shuffled[m] = shuffled[i],
+                shuffled[i] = t;
             }
 
-            return inputArray;
+            return shuffled;
         }
 
-        function flipFlopData(data) {
+        function getNewText() {
 
-            flip_flop++;
+            var rotation = [
+                    ["2","4"," ","h","o","u","r","s"],
+                    ["s","a","n"," ","d","i","e","g","o",","," ","c","alifornia"],
+                    ["x","y","z"," ","s","c","hools"],
+                    ["x","y","z"," ","i","n"," ","p","rizes"],
+                    ["s","e","m","i","n","a","r"," ","f","or new hackers"],
+                    ["x","y","z"," ","b","i","g","-","n","a","m","e"," ","s","p",
+                        "o","nsors"]
+                ];
+
 
             if (flip_flop % 2 === 0) {
 
-                return data;
+                rotation_index++;
+                return rotation[rotation_index % rotation.length];
             }
             else {
 
-                data = rotation[rotation_index % rotation.length];
-                rotation_index++;
-                return data;
+                return shuffleAlphabet()
+                    .slice(0, Math.floor(Math.random() * 26) + 1)
+                    .sort();
             }
         }
 
-        </script>
- <!-- </div>
-</div> -->
+</script>
+</body>
 
 <!--The bar between the stats page and the FAQ page.-->
 <div id="white-divider-bar">
