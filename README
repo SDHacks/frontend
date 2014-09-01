@@ -6,6 +6,14 @@ Uses bootstrap and css and .less files.
 
 Might switch from bootstrap to Bourbon Neat if things go really well.
 
+STYLE GUIDLINES:
+    Indent by four spaces.
+    Keep lines no longer than 90 characters.
+    Use c-style variable declarations, meaning that you declare ALL
+        your variables at the top of each function and never any
+        more than that.
+
+
 Production Timeline:
 
     Micah:
@@ -20,8 +28,4 @@ Production Timeline:
         Back-end:
             Registration button on front page
             Sponsor button on front page
-
-    Joseph:
-        Back-end:
-            SD Hacks email address (idk when)
-        Anything else you want to work on that you have the time for.
+            TESC introduction page.
