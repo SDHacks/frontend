@@ -2770,6 +2770,9 @@ fieldset[disabled] .btn {
 .btn-default {
   color: #333333;
   font-size: 2em;
+  -moz-box-shadow: 0px 0px 14px -3px #050505;
+  -webkit-box-shadow: 0px 0px 14px -3px #050505;
+  box-shadow: 0px 0px 14px -3px #050505;
   background-color: #ffff00;
   border: none;
 }
@@ -6409,4 +6412,9 @@ body {
 .twitter-facebook-button:active {
     position:relative;
     top:1px;
+}
+.space-button {
+    display:inline-block;
+    height:1px;
+    width:5px;
 }
