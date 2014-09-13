@@ -14,10 +14,20 @@
   }
 
   .tagline {
-    @extend h2;
+    @extend h3;
+    margin: 1em auto;
   }
 
   .actions {
     margin: 2em auto;
+
+    * {
+      margin: auto 15px;
+    }
+
+    button {
+      font-size: 1.4em;
+      text-transform: uppercase;
+    }
   }
 }
