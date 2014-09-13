@@ -14,3 +14,9 @@ html, body
 .container {
   @include outer-container;
 }
+
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 2em;
+}
