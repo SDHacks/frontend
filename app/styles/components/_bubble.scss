@@ -1,0 +1,12 @@
+// Statistic bubble
+.bubble {
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: thick solid $blue;
+  font-size: 20px;
+  line-height: 200px;
+  text-align: center;
+  text-decoration: none;
+}
