@@ -3,7 +3,7 @@
 describe('controllers', function(){
   var scope;
 
-  beforeEach(module('angSdhacks'));
+  beforeEach(module('sdhacks'));
 
   beforeEach(inject(function($rootScope) {
   	scope = $rootScope.$new();
