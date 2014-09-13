@@ -1,0 +1,21 @@
+// Styles for the about section
+#about {
+  padding-top: 1.5em;
+  height: 100%;
+  border-top: 2px solid $light-gray;
+
+  #info {
+    @include span-columns(6);
+  }
+
+  #stats {
+    @include span-columns(6);
+    @include omega;
+
+    .cell {
+      @include span-columns(3 of 6);
+      @include omega(2n);
+      margin: .4em;
+    }
+  }
+}

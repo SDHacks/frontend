@@ -4,6 +4,10 @@
 @import "vendor/neat/neat";
 @import "base/base";
 
+// Components
+@import "components/bubble";
+
 // Pages
 @import "page/base";
 @import "page/home";
+@import "page/about";
