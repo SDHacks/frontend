@@ -1,7 +1,8 @@
 // Typography
-$sans-serif: $helvetica;
+$montserrat: "Montserrat", sans-serif;
+$sans-serif: $montserrate;
 $serif: $georgia;
-$base-font-family: $sans-serif;
+$base-font-family: $montserrat;
 $header-font-family: $base-font-family;
 
 // Sizes
