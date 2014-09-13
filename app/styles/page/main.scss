@@ -1,1 +1,23 @@
 // Styles for main(home) page
+
+#home {
+  @include fill-parent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  height: 100%;
+
+  #logo {
+    max-width: 50%;
+  }
+
+  .tagline {
+    @extend h2;
+  }
+
+  .actions {
+    margin: 2em auto;
+  }
+}
