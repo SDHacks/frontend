@@ -1,39 +1,108 @@
-<div class="container">
+<div id="home-container">
 
-  <nav class="navbar">
-    <a href="#">Gulp Angular</a>
-
-    <ul>
-      <li class="active"><a ng-href="#">Home</a></li>
-      <li><a ng-href="#">About</a></li>
-      <li><a ng-href="#">Contact</a></li>
-    </ul>
-  </nav>
-
-  <div class="jumbotron">
-    <h1>'Allo, 'Allo!</h1>
-    <p class="lead">
-      <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-      Always a pleasure scaffolding your apps.
-    </p>
-    <p><a class="btn" ng-href="#">Splendid!</a></p>
-  </div>
-
-  <div class="col" ng-repeat="awesomeThing in awesomeThings | orderBy:'rank'">
-    <div class="thumbnail">
-      <img class="pull-right" ng-src="images/{{awesomeThing.logo}}" alt="{{awesomeThing.title}}">
-      <div class="caption">
-        <h3>{{awesomeThing.title}}</h3>
-        <p>{{awesomeThing.description}}</p>
-        <p><a ng-href="{{awesomeThing.url}}">{{awesomeThing.url}}</a></p>
-      </div>
+  <!--These are the two post-it note looking thingies-->
+  <div id="rectangle1">
+    <div id="rectangle2">
     </div>
   </div>
 
-  <hr>
+  <!--These are the buttons, headers, and text on the first page.-->
+  <div class="content">
 
-  <div class="footer">
-    <p>With ♥ from <a href="https://twitter.com/Swiip">@Swiip</a></p>
+    <h1><font size="100%">SD</font><br>Hacks</h1>
+
+    <p class="h4">
+      Team up with your friends, make<br>
+      new ones, and create something<br>
+      exciting with us at SD Hacks!
+    </p>
+
+    <p class="h5">SAN DIEGO CONVENTION CENTER<br>March 31, 2015</p>
+
+    <button class="btn btn-default">REGISTER</button>
+    <button class="btn btn-default">SPONSOR</button>
+    <a href="https://twitter.com/sdhacks" class="twitter-facebook-button">t</a>
+    <a class="space-button"></a>
+    <a href="https://www.facebook.com/groups/sdhacks/" class="twitter-facebook-button">f</a>
+  </div>
+</div>
+
+<!--The bar between the home page and the stats page.-->
+<div id="black-divider-bar">
+  <div class="content">
+    <h1><font size="100%">DETAILS</font></h1>
+  </div>
+</div>
+
+<!--The stats page, containing # of hours, $ of prizes, cost.-->
+<div id="stats-page"></div>
+<script src="d3/d3.min.js"></script>
+<script src="d3/d3.js"></script>
+<script src="js/stat-page-functions.js"></script>
+
+<script>
+
+  var ALPHABET = "abcdefghijklmnopqrstuvwxyz".split(""),
+      width = 1400,
+      height = 300,
+      svg = d3.select("#stats-page").append("svg")
+          .attr("width", width)
+          .attr("height", height)
+          .append("g")
+          .attr("transform", "translate(32," + (height / 2) + ")"),
+      flip_flop = -1,
+      rotation_index = -1;
+
+  // The initial display.
+  updateText(ALPHABET);
+
+  // setInterval is an infinite loop that will call
+  // its contents at a given interval (second parameter).
+  setInterval(function () {
+
+    flip_flop++;
+    updateText(getNewText());
+
+  }, 2200);
+
+
+</script>
+
+<!--The bar between the stats page and the FAQ page.-->
+<div id="white-divider-bar">
+  <div class="content">
+    <h1><font size="100%">FAQ</font></h1>
+  </div>
+</div>
+
+<!--The FAQ page-->
+<div id="faq-container">
+
+  <div id="faq-rect-1">
+
+    <p>Q: How big are the team sizes?</p>
+
+    <p>A: We encourage a policy of no lone hackers, and no teams bigger than five.
+      We believe that this best promotes both what a hack means to us, and what
+      is the most fun.</p>
   </div>
 
+  <div id="faq-rect-1">
+
+    <p>Q: What if I don't have a team?</p>
+
+    <p>A: No problem! We'll be having a mixer right before the hack so that you can team up.
+      No one will be hacking alone.</p>
+
+  </div>
+
+  <div id="faq-rect-1">
+
+    <p>Q: How much does it cost?</p>
+
+    <p>A: The event is free to college students who make it throught our registration process.
+      Food, electricity, internet, and all other necessary equipment for your development
+      process will be provided.</p>
+
+  </div>
 </div>
