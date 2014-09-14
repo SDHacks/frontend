@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('sdhacks', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'restangular', 'ui.router']);
+var app = angular.module('sdhacks', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'restangular', 'ui.router', 'wu.masonry']);
 
 app.config(function ($stateProvider, $urlRouterProvider) {
   $stateProvider

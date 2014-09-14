@@ -1,0 +1,15 @@
+// Styles for the about section
+#faq {
+//  display: block;
+  padding-top: 4%;
+  height: 100%;
+  border-top: 2px solid $light-gray;
+
+  .faq-item {
+    width: 25%;
+
+    h5 {
+      margin-bottom: .3em;
+    }
+  }
+}
