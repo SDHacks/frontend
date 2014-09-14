@@ -5,8 +5,18 @@
   height: 200px;
   border-radius: 50%;
   border: thick solid $blue;
-  font-size: 20px;
-  line-height: 200px;
+  font-size: 18px;
   text-align: center;
   text-decoration: none;
+
+  p {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+    .highlight {
+      display: block;
+      font-size: 30px;
+    }
+  }
 }
