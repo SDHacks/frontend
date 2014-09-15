@@ -6,22 +6,22 @@
   border-top: 2px solid $light-gray;
 
   #info {
-    @include span-columns(12);
-
-    .cell {
-      @include span-columns(3 of 12);
-      @include omega(4n);
-      margin: .4em;
-    }
-
     p.lead {
       text-align: center;
       margin: auto;
       font-size: 1.3em;
     }
 
-    #stats {
-      margin-top: 10%;
+  }
+
+  #stats {
+    margin-top: 10%;
+    width: 100%;
+
+    .cell {
+      @include span-columns(3);
+      @include omega(4n);
+      text-align: center;
     }
   }
 }
