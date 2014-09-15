@@ -18,11 +18,12 @@
       <p class="lead">Fusce tempus ultrices erat nec semper. Quisque quis massa fermentum orci suscipit vehicula eget
         aclorem.</p>
       <div id="stats">
-        <ul>
-          <li class="cell"><div class="bubble"><p><span class="highlight">36</span> hours</p></div></li>
-          <li class="cell"><div class="bubble"><p><span class="highlight">1000</span> hackers</p></div></li>
-          <li class="cell"><div class="bubble"><p><span class="highlight">42</span> companies</p></div></li>
-          <li class="cell"><div class="bubble"><p><span class="highlight">$20000</span> in prizes</p></div></li>
+        <ul ng-controller="StatsCtrl">
+          <li class="cell" ng-repeat="(unit, stat) in stats">
+            <div class="bubble">
+              <p><span class="highlight">{{ stat }}</span> {{ unit }}</p>
+            </div>
+          </li>
         </ul>
       </div>
     </div>
