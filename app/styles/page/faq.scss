@@ -1,8 +1,8 @@
 // Styles for the about section
 #faq {
-//  display: block;
+  display: block;
   padding-top: 4%;
-  height: 100%;
+  min-height: 100%;
   border-top: 2px solid $light-gray;
 
   .faq-item {
