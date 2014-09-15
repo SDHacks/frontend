@@ -1,0 +1,35 @@
+#sponsors {
+  display: block;
+  padding-top: 4%;
+  height: 100%;
+  border-top: 2px solid $light-gray;
+  text-align: center;
+  margin: 0 auto;
+
+  .sponsor {
+    padding: 10px;
+
+    &.partner {
+      margin: 0 auto;
+      max-width: 40%;
+    }
+
+    &.platinum {
+      @include span-columns(4);
+      @include omega(3n);
+    }
+
+    &.gold {
+      width: 25%;
+    }
+
+    &.silver {
+      width: 15%;
+    }
+
+    &.bronze {
+      display: inline-block;
+      width: 15%;
+    }
+  }
+}
