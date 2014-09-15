@@ -1,0 +1,17 @@
+#contact {
+  display: block;
+  padding-top: 2%;
+  min-height: 100%;
+  border-top: 2px solid $light-gray;
+  margin: 0 auto;
+
+  form {
+    margin: 0 auto;
+    max-width: 60%;
+
+    .button {
+      float: right;
+    }
+  }
+
+}
