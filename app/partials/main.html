@@ -50,7 +50,6 @@
     <br />
     <div ng-controller="SponsorsCtrl">
       <div ng-repeat="level in levels">
-        <h3>{{ level | uppercase }}</h3>
 
         <div class="sponsor {{ level }}" ng-repeat="sponsor in sponsors | filter:level:level">
           <div class="{{ sponsor.level }}">
