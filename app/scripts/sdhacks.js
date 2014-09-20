@@ -7,6 +7,10 @@ app.config(function ($stateProvider, $urlRouterProvider) {
     .state('home', {
       url: '/',
       templateUrl: 'partials/main.html'
+    })
+    .state('register', {
+      url: '/register',
+      templateUrl: 'partials/register.html'
     });
 
   $urlRouterProvider.otherwise('/');
