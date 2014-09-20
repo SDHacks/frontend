@@ -1,9 +1,9 @@
 // Styles for the about section
 #about {
   display: block;
-  padding-top: 7%;
+  padding: 7% 0;
   min-height: 100%;
-  border-top: 2px solid $light-gray;
+  border-top: 4px solid $light-gray;
 
   #info {
     p.lead {
