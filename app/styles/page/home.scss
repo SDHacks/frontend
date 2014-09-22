@@ -28,10 +28,12 @@
     max-width: 60%;
     font-weight: bold;
     margin: 1em auto;
+    color: black;
   }
 
   .details {
     @extend h5;
+    color: black;
   }
 
   .actions {
