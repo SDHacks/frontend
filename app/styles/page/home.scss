@@ -15,7 +15,7 @@
   .content {
     @include fill-parent;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-color: rgba(250, 250, 250, .6);
   }
 
@@ -44,6 +44,19 @@
     button {
       font-size: 1.4em;
       text-transform: uppercase;
+    }
+  }
+
+  .social {
+    font-size: 3em;
+    a {
+      @extend a;
+      color: $base-font-color;
+      margin: auto .3em;
+
+      &:hover {
+        color: lighten($base-font-color, 10%);
+      }
     }
   }
 }
