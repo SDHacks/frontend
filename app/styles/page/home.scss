@@ -50,15 +50,16 @@
   }
 
   .social {
-    font-size: 3em;
+    font-size: 1.8em;
+    float: right;
+    padding-right: .5em;
+    padding-left: 1em;
+    background-color: white;
+    border-bottom-left-radius: 2em;
+
     a {
       @extend a;
-      color: $base-font-color;
-      margin: auto .3em;
-
-      &:hover {
-        color: lighten($base-font-color, 10%);
-      }
+      margin: auto .2em;
     }
   }
 }
