@@ -1,0 +1,21 @@
+// Styles for the about section
+#presented-by {
+  display: block;
+  padding: 2% inherit;
+  vertical-align: middle;
+
+  .presenters {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    .presenter {
+      flex: 1 33%;
+      text-align: center;
+    }
+  }
+
+}
