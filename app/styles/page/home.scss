@@ -24,8 +24,14 @@
   }
 
   .tagline {
-    @extend h5;
+    @extend h3;
+    max-width: 60%;
+    font-weight: bold;
     margin: 1em auto;
+  }
+
+  .details {
+    @extend h5;
   }
 
   .actions {
