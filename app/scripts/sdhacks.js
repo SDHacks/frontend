@@ -20,6 +20,10 @@ app.config(function ($stateProvider, $urlRouterProvider) {
     .state('register', {
       url: '/register',
       templateUrl: 'partials/register.html'
+    })
+    .state('sponsor', {
+      url: '/sponsor',
+      templateUrl: 'partials/sponsor.html'
     });
 
   $urlRouterProvider.otherwise('/');
