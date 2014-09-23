@@ -2,7 +2,7 @@
 
 var app = angular.module('sdhacks', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'restangular', 'ui.router', 'wu.masonry', 'ui.jq']);
 
-app.config(function ($stateProvider, $urlRouterProvider) {
+app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function ($stateProvider, $urlRouterProvider, $locationProvider) {
   $stateProvider
     .state('home', {
       abstract: true,
@@ -26,5 +26,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
       templateUrl: 'partials/sponsor.html'
     });
 
+  $locationProvider.html5Mode(true);
+
   $urlRouterProvider.otherwise('/');
-});
+}]);
