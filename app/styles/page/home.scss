@@ -7,7 +7,7 @@
   align-items: center;
   text-align: center;
   margin: 0;
-  margin-bottom: -50px;
+  margin-top: -50px;
   min-height: 100%;
   background-image: url('../images/circuits.png');
   background-size: cover;
@@ -17,8 +17,8 @@
     @include fill-parent;
     width: 100%;
     min-height: 100vh;
-    padding-top: 3%;
-    background-color: rgba(255, 255, 255, .4);
+    padding-top: 6%;
+    background-color: rgba(75, 75, 125, .35);
   }
 
   #logo {
@@ -30,12 +30,12 @@
     max-width: 60%;
     font-weight: bold;
     margin: .2em auto 1em auto;
-    color: black;
+    color: white;
   }
 
   .details {
     @extend h5;
-    color: black;
+    color: white;
     font-weight: bold;
   }
 
@@ -47,8 +47,12 @@
     }
 
     button {
+      @extend button;
+      background-color: lighten($blue, 5%);
       font-size: 1.4em;
       text-transform: uppercase;
+
     }
   }
+
 }
