@@ -2,6 +2,10 @@
 
 app.controller('StatsCtrl',
   ['$scope', function ($scope) {
+    $scope.animation = 'hidden';
+    $scope.options = {
+      offset: '25%'
+    };
 
     var stats = {
       hours: 36,
@@ -11,4 +15,10 @@ app.controller('StatsCtrl',
     };
 
     $scope.stats = stats;
+
+    $scope.pop = function() {
+      $scope.animation = 'animated fadeIn';
+      $scope.$apply();
+      console.log($scope.animated);
+    };
   }]);

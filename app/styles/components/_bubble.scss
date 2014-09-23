@@ -23,4 +23,8 @@
   &.invert {
     border-color: lighten($light-gray, 10%);
   }
+
+  &.hidden {
+    display: none;
+  }
 }
