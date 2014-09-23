@@ -30,7 +30,18 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div ui-view class="wrapper"></div>
+    <nav id="navigation">
+      <ul>
+        <li><a href="#home" du-smooth-scroll du-scrollspy>Home</a></li>
+        <li><a href="#about" du-smooth-scroll du-scrollspy>About</a></li>
+        <li><a href="#faq" du-smooth-scroll du-scrollspy>FAQ</a></li>
+        <li><a href="#sponsors" du-smooth-scroll du-scrollspy>Sponsors</a></li>
+        <li><a href="#contact" du-smooth-scroll du-scrollspy>Contact</a></li>
+        <li><a href="#presented-by" du-smooth-scroll du-scrollspy>Producers</a></li>
+      </ul>
+    </nav>
+
+    <div ui-view class="wrapper" du-scroll-container></div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
@@ -68,6 +79,7 @@
     <script src="bower_components/imagesloaded/imagesloaded.js"></script>
     <script src="bower_components/angular-masonry/angular-masonry.js"></script>
     <script src="bower_components/angular-ui-utils/jq.js"></script>
+    <script src="bower_components/angular-scroll/angular-scroll.min.js"></script>
     <!-- endbower -->
     <script src="bower_components/jquery-waypoints/waypoints.js"></script>
     <!-- endbuild -->
