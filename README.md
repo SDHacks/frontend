@@ -24,6 +24,12 @@ Once you have npm, you can use it to install bower.
 
 `npm install -g bower`
 
+#### Setting up Gulp
+
+Use this command to install gulp:
+
+`npm install -g gulp`
+
 ---
 
 ### Getting started
@@ -31,5 +37,5 @@ Once you have npm, you can use it to install bower.
 1. Once you have the environment set up, download the Bower components by using the command `bower install`.
 2. Install the project's dependencies(including gulp) by using command `npm install`.
 3. To compile, run `gulp`. This should create a folder `dist` containing the compiled project.
-4. To have gulp watch your work and reload the browser, run `gulp watch`. 
+4. To have gulp watch your work and reload the browser, run `gulp serve`.
 
