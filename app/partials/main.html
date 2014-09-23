@@ -52,16 +52,18 @@
 </div>
 
 <div id="faq">
-  <div class="container">
-    <h2>FAQ</h2>
-    <br />
-    <div masonry ng-controller="FAQCtrl">
-      <div class="masonry-brick faq-item" ng-repeat="item in items">
-        <h5>{{ item.question }}</h5>
-        <p>{{ item.answer }}</p>
+  <div class="content">
+    <div class="container">
+      <h2>FAQ</h2>
+      <br />
+      <div masonry ng-controller="FAQCtrl">
+        <div class="masonry-brick faq-item" ng-repeat="item in items">
+          <h5>{{ item.question }}</h5>
+          <p>{{ item.answer }}</p>
+        </div>
       </div>
-    </div>
 
+    </div>
   </div>
 </div>
 
