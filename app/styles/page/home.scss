@@ -16,6 +16,7 @@
     @include fill-parent;
     width: 100%;
     min-height: 100vh;
+    padding-top: 3%;
     background-color: rgba(250, 250, 250, .6);
   }
 
@@ -51,7 +52,9 @@
 
   .social {
     font-size: 1.8em;
-    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
     padding-right: .5em;
     padding-left: 1em;
     background-color: white;
