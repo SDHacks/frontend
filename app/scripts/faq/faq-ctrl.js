@@ -5,6 +5,10 @@ app.controller('FAQCtrl',
 
     var items = [
       {
+        question: 'What is a hackathon?',
+        answer: 'A hackathon is an event, typically lasting several days, in which a large number of people meet to engage in collaborative computer programming.'
+      },
+      {
         question: 'How big are the team sizes?',
         answer: 'We encourage a policy of no lone hackers, and no teams bigger than five. We believe that this best promotes both what a hack means to us, and what is the most fun.'
       },
@@ -17,16 +21,12 @@ app.controller('FAQCtrl',
         answer: 'The event is free to college students who make it through our registration process. Food, electricity, internet, and all other necessary equipment for your development process will be provided.'
       },
       {
-        question: 'Lorem ipsum dolor sit amet?',
-        answer: 'Sed vel nibh ac augue cursus fringilla. Phasellus aliquet metus vitae dui tempor, nec feugiat risus pellentesque. Proin condimentum mattis vehicula.'
+        question: 'Who can attend?',
+        answer: 'We welcome any and all undergraduate students from any university to attend SD Hacks.'
       },
       {
-        question: 'Sed vel nibh ac augue cursus fringilla?',
-        answer: 'Quisque gravida risus malesuada orci venenatis aliquet.'
-      },
-      {
-        question: 'Aliquam sem ante, venenatis vitae porttitor vitae, rhoncus in mi?',
-        answer: 'Donec risus sem, pellentesque et dui et, egestas egestas orci. Ut eget elit id turpis vulputate egestas quis quis nunc. Integer metus libero, aliquet sit amet sollicitudin sed, elementum vitae orci. Praesent faucibus erat eget lobortis aliquam.'
+        question: 'What if I have a question not answered here?',
+        answer: 'Feel free to contact our team by using the form below OR send an email to support@sdhacks.io!'
       }
     ];
 
