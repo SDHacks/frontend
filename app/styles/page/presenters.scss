@@ -21,9 +21,16 @@
     text-align: center;
     margin: .8em auto;
 
+    img {
+      max-width: 150px;
+    }
+
     &.large {
       margin-top: .2em;
       flex: 2 100%;
+      img {
+        max-width: 275px;
+      }
     }
   }
 }
