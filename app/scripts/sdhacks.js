@@ -16,7 +16,7 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', functio
     })
     .state('home.contact-submit', {
       url: '',
-      template: '<h4 style="text-align: center;">Thank you for your message!</h4>'
+      template: '<div class="message"><h4>Thank you for your message!</h4><br /><a class="invert" ui-sref="home.contact">Need to submit another question?</a></div>'
     })
     .state('register', {
       url: '/register',
