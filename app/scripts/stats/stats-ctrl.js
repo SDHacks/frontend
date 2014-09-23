@@ -1,7 +1,7 @@
 'use strict';
 
 app.controller('StatsCtrl',
-  ['$scope', function ($scope) {
+  ['$scope', 'Sponsors', function ($scope, Sponsors) {
     $scope.animation = 'hidden';
     $scope.options = {
       offset: '25%'
@@ -10,7 +10,7 @@ app.controller('StatsCtrl',
     var stats = {
       hours: 36,
       hackers: 1000,
-      companies: 42,
+      companies: Sponsors.getCount(),
       'in prizes': '$20000'
     };
 
