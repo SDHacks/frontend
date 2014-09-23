@@ -7,6 +7,7 @@
   align-items: center;
   text-align: center;
   margin: 0;
+  margin-bottom: -50px;
   min-height: 100%;
   background-image: url('../images/circuits.png');
   background-size: cover;
@@ -48,22 +49,6 @@
     button {
       font-size: 1.4em;
       text-transform: uppercase;
-    }
-  }
-
-  .social {
-    font-size: 1.8em;
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding-right: .5em;
-    padding-left: 1em;
-    background-color: white;
-    border-bottom-left-radius: 2em;
-
-    a {
-      @extend a;
-      margin: auto .2em;
     }
   }
 }

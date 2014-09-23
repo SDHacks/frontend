@@ -7,7 +7,8 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', functio
     .state('home', {
       abstract: true,
       url: '/',
-      templateUrl: 'partials/main.html'
+      templateUrl: 'partials/main.html',
+      controller: 'MainCtrl'
     })
     .state('home.contact', {
       url: '',
