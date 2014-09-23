@@ -4,19 +4,26 @@
   padding-top: 2%;
   padding-bottom: 60px;
   vertical-align: middle;
+}
 
-  .presenters {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
+.presenters {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  max-width: 500px;
+  margin: 0 auto;
 
-    .presenter {
-      flex: 1 33%;
-      text-align: center;
+  .presenter {
+    flex: 1 50%;
+    text-align: center;
+    margin: .8em auto;
+
+    &.large {
+      margin-top: .2em;
+      flex: 2 100%;
     }
   }
-
 }
