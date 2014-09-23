@@ -1,5 +1,6 @@
 #navigation {
   border-top: 1px solid $light-gray;
+  border-bottom: 1px solid $light-gray;
   background-color: white;
   width: 100%;
   height: 50px;
@@ -51,4 +52,5 @@
 .stuck {
   top: 0;
   position: fixed;
+  border-top: 0;
 }
