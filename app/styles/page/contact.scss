@@ -4,7 +4,15 @@
   margin: 0 auto;
   background-color: lighten($blue, 5%);
   color: white;
-  min-height: 75%;
+  height: 80%;
+
+  div[ui-view].ng-enter {
+    animation: fadeInUp .3s;
+  }
+
+  div[ui-view].ng-leave {
+    animation: fadeOutDown .3s;
+  }
 
   form {
     margin: 0 auto;
