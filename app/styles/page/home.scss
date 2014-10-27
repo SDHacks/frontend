@@ -7,12 +7,16 @@
   align-items: center;
   text-align: center;
   margin: 0;
-//  margin-top: -50px;
   min-height: 100%;
   background-image: url('../images/sd_bg.jpg');
   background-size: cover;
   background-position: center;
   color: white;
+
+  //Scale Text on Mobile
+  @media screen and (max-width: 800px) {
+    font-size: 12px;
+  }
 
   .content {
     @include fill-parent;
@@ -23,14 +27,26 @@
   }
 
   #logo {
-    max-height: 50%;
+    max-height: 50vh;
     margin-bottom: 10px;
+  }
+
+  .registration{
+    background-color: rgba(0,0,0,.3);
+    padding: .8em;
+    @include span-columns(10 of 16);
+    @include shift(3 of 16);
+
+    //Scale Registration Container on Mobile
+    @media screen and (max-width: 800px) {
+      @include span-columns(14 of 16);
+      @include shift(1 of 16);
+    }
   }
 
   .tagline {
     @extend h4;
-    max-width: 60%;
-    margin: .2em auto 1em auto;
+    margin: .2em .6em 1em .6em;
     color: white;
   }
 
@@ -62,11 +78,25 @@
   background-color: rgba(255,255,255,.5);
 
   .left {
-    @include span-columns(4 of 16);
-    @include shift(5 of 16);
+
+    @include span-columns(6 of 16);
+    @include shift(3 of 16);
+
+    //Scale the subscribe boxes on mobile
+    @media screen and (max-width: 800px) {
+      @include span-columns(9 of 16);
+      @include shift(0 of 16);
+    }
+
   }
 
   .right {
-    @include span-columns(2 of 16);
+
+    @include span-columns(4 of 16);
+
+    //Scale the subscribe boxes on mobile
+    @media screen and (max-width: 800px) {
+      @include span-columns(7 of 16);
+    }
   }
 }

@@ -4,27 +4,31 @@
       <h1 class="animated fadeIn">
         <img id="logo" src="images/logo.png" alt="SD Hacks">
       </h1>
-      <p class="tagline">Be the first to know when San Diego's first premier hackathon goes live</p>
-      <form id="subscribe" name="MailchimpSubscriptionForm" ng-controller="MailchimpSubscriptionCtrl">
-        <div ng-hide="mailchimp.result === 'success'">
-          <input class="hidden" type="hidden" ng-model="mailchimp.username" ng-init="mailchimp.username='sdhacks'">
-          <input class="hidden" type="hidden" ng-model="mailchimp.dc" ng-init="mailchimp.dc='us9'">
-          <input class="hidden" type="hidden" ng-model="mailchimp.u" ng-init="mailchimp.u='2b76757d9b200f72632d7330a'">
-          <input class="hidden" type="hidden" ng-model="mailchimp.id" ng-init="mailchimp.id='148fb5f948'">
-          <input style="color: black;" class="left" type="email" name="email" ng-model="mailchimp.email" placeholder="hacker@sdhacks.io" required>
-          <button class="right" ng-disabled="MailchimpSubscriptionForm.$invalid" ng-click="addSubscription(mailchimp)">I'm ready</button>
-        </div>
+      <div class="registration">
 
-        <!-- Show error message if MailChimp unsuccessfully added the email to the list. -->
-        <div ng-show="mailchimp.result === 'error'" ng-cloak>
-          <p ng-bind-html="mailchimp.errorMessage"></p>
-        </div>
+        <p class="tagline">Be the first to know when San Diego's first premier hackathon goes live</p>
+        <form id="subscribe" name="MailchimpSubscriptionForm" ng-controller="MailchimpSubscriptionCtrl">
+          <div ng-hide="mailchimp.result === 'success'">
+            <input class="hidden" type="hidden" ng-model="mailchimp.username" ng-init="mailchimp.username='sdhacks'">
+            <input class="hidden" type="hidden" ng-model="mailchimp.dc" ng-init="mailchimp.dc='us9'">
+            <input class="hidden" type="hidden" ng-model="mailchimp.u" ng-init="mailchimp.u='2b76757d9b200f72632d7330a'">
+            <input class="hidden" type="hidden" ng-model="mailchimp.id" ng-init="mailchimp.id='148fb5f948'">
+            <input style="color: black;" class="left" type="email" name="email" ng-model="mailchimp.email" placeholder="hacker@sdhacks.io" required>
+            <button class="right" ng-disabled="MailchimpSubscriptionForm.$invalid" ng-click="addSubscription(mailchimp)">I'm ready</button>
+          </div>
 
-        <!-- Show success message if MailChimp returned successfully. -->
-        <div ng-show="mailchimp.result === 'success'" ng-cloak>
-          <p>Thank you. Stay tuned, we'll be live soon.</p>
-        </div>
-      </form>
+          <!-- Show error message if MailChimp unsuccessfully added the email to the list. -->
+          <div ng-show="mailchimp.result === 'error'" ng-cloak>
+            <p ng-bind-html="mailchimp.errorMessage"></p>
+          </div>
+
+          <!-- Show success message if MailChimp returned successfully. -->
+          <div ng-show="mailchimp.result === 'success'" ng-cloak>
+            <p>Thank you. Stay tuned, we'll be live soon.</p>
+          </div>
+        </form>
+        <div style="clear:both"></div>
+      </div>
     </div>
   </div>
 </div>
