@@ -6,7 +6,7 @@
       </h1>
       <div class="registration">
 
-        <p class="tagline">Be the first to know when San Diego's first premier hackathon goes live</p>
+        <p class="tagline">Find out when San Diego's first premier hackathon goes live.</p>
         <form id="subscribe" name="MailchimpSubscriptionForm" ng-controller="MailchimpSubscriptionCtrl">
           <div ng-hide="mailchimp.result === 'success'">
             <input class="hidden" type="hidden" ng-model="mailchimp.username" ng-init="mailchimp.username='sdhacks'">
@@ -28,6 +28,20 @@
           </div>
         </form>
         <div style="clear:both"></div>
+      </div>
+      <div style="clear:both"></div>
+      <div class="socialicons">
+        <a href="mailto:sdhacks@tesc.ucsd.edu">
+          <i class="icon_mail"></i>
+        </a>
+        &nbsp;&nbsp;&nbsp;
+        <a href="https://www.facebook.com/SDHacks">
+          <i class="social_facebook"></i>
+        </a>
+        &nbsp;&nbsp;&nbsp;
+        <a href="https://twitter.com/SDHacks">
+          <i class="social_twitter"></i>
+        </a>
       </div>
     </div>
   </div>
