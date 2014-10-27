@@ -4,111 +4,27 @@
       <h1 class="animated fadeIn">
         <img id="logo" src="images/logo.png" alt="SD Hacks">
       </h1>
-      <p class="tagline">Experience the hackathon of a lifetime.</p>
-      <p class="details">Location TBD<br/>February 28 - March 2, 2014</p>
-      <div class="actions">
-        <button class="button" ui-sref="register">Register</button>
-        <button class="button" ui-sref="sponsor">Sponsor</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<nav id="navigation" ui-jq="waypoint" ui-options="sticky">
-  <ul>
-    <li><a href="#home" du-smooth-scroll du-scrollspy>Home</a></li>
-    <li><a href="#about" offset="50px" du-smooth-scroll du-scrollspy>About</a></li>
-    <li><a href="#faq" offset="50px" du-smooth-scroll du-scrollspy>FAQ</a></li>
-    <li><a href="#sponsors" offset="50px" du-smooth-scroll du-scrollspy>Sponsors</a></li>
-    <li><a href="#contact" offset="50px" du-smooth-scroll du-scrollspy>Contact</a></li>
-    <!--<li><a href="#presented-by" offset="50px" du-smooth-scroll du-scrollspy>Producers</a></li>-->
-
-    <div class="social">
-      <li><a target="_blank" href="https://www.facebook.com/SDHacks"><i class="icon social_facebook"></i></a></li>
-      <li><a target="_blank" href="https://twitter.com/sdhacks"><i class="icon social_twitter"></i></a></li>
-    </div>
-  </ul>
-
-</nav>
-
-<div id="about" ng-controller="StatsCtrl" ui-jq="waypoint" ui-options="pop, options">
-  <div class="container">
-    <div id="info">
-      <p class="lead">For one weekend, SD Hacks plans to turn San Diego into the hack capital of the world and you're invited.</p>
-    </div>
-
-    <div id="stats">
-      <ul>
-        <li class="cell" ng-repeat="(unit, stat) in stats">
-          <div class="bubble"
-               ng-class="animation">
-            <p><span class="highlight">{{ stat }}</span> {{ unit }}</p>
-          </div>
-        </li>
-      </ul>
-    </div>
-
-  </div>
-</div>
-
-<div id="faq">
-  <div class="content">
-    <div class="container">
-      <h2>FAQ</h2>
-      <br />
-      <div masonry ng-controller="FAQCtrl">
-        <div class="masonry-brick faq-item" ng-repeat="item in items">
-          <h5>{{ item.question }}</h5>
-          <p>{{ item.answer }}</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<div id="sponsors">
-  <div class="container">
-    <h2>Our Sponsors</h2>
-    <br />
-    <div ng-controller="SponsorsCtrl">
-      <div ng-repeat="level in levels">
-
-        <div class="sponsor {{ level }}" ng-repeat="sponsor in sponsors | filter:level:level">
-          <div class="{{ sponsor.level }}">
-            <img src="{{ sponsor.image }}" alt="{{ sponsor.name }}">
-          </div>
+      <p class="tagline">Be the first to know when San Diego's first premier hackathon goes live</p>
+      <form id="subscribe" name="MailchimpSubscriptionForm" ng-controller="MailchimpSubscriptionCtrl">
+        <div ng-hide="mailchimp.result === 'success'">
+          <input class="hidden" type="hidden" ng-model="mailchimp.username" ng-init="mailchimp.username='sdhacks'">
+          <input class="hidden" type="hidden" ng-model="mailchimp.dc" ng-init="mailchimp.dc='us9'">
+          <input class="hidden" type="hidden" ng-model="mailchimp.u" ng-init="mailchimp.u='2b76757d9b200f72632d7330a'">
+          <input class="hidden" type="hidden" ng-model="mailchimp.id" ng-init="mailchimp.id='148fb5f948'">
+          <input style="color: black;" class="left" type="email" name="email" ng-model="mailchimp.email" placeholder="hacker@sdhacks.io" required>
+          <button class="right" ng-disabled="MailchimpSubscriptionForm.$invalid" ng-click="addSubscription(mailchimp)">I'm ready</button>
         </div>
 
-      </div>
-    </div>
+        <!-- Show error message if MailChimp unsuccessfully added the email to the list. -->
+        <div ng-show="mailchimp.result === 'error'" ng-cloak>
+          <p ng-bind-html="mailchimp.errorMessage"></p>
+        </div>
 
-  </div>
-</div>
-
-<div id="contact">
-  <div class="container">
-    <h2>Contact Us</h2>
-    <br />
-
-    <div ui-view></div>
-
-  </div>
-</div>
-
-<div id="presented-by">
-  <div class="container">
-    <h2>Presented by</h2>
-    <br />
-    <div class="presenters">
-      <div class="presenter large">
-        <a target="_blank" href="http://tesc.ucsd.edu"><img src="images/presenters/tesc.png"
-                                            alt="Triton Engineering Student Council at UC San Diego"/></a>
-      </div>
-
-      <div class="presenter">
-        <a target="_blank" href="http://mlh.io"><img src="images/presenters/mlh.png" alt="Major League Hacking"/></a>
-      </div>
+        <!-- Show success message if MailChimp returned successfully. -->
+        <div ng-show="mailchimp.result === 'success'" ng-cloak>
+          <p>Thank you. Stay tuned, we'll be live soon.</p>
+        </div>
+      </form>
     </div>
   </div>
 </div>
