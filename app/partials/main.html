@@ -8,13 +8,13 @@
 
         <p class="tagline">Find out when San Diego's first premier hackathon goes live.</p>
         <form id="subscribe" name="MailchimpSubscriptionForm" ng-controller="MailchimpSubscriptionCtrl">
-          <div ng-hide="mailchimp.result === 'success'">
+          <div ng-hide="mailchimp.result === 'success'" id="subscriptionInputs">
             <input class="hidden" type="hidden" ng-model="mailchimp.username" ng-init="mailchimp.username='sdhacks'">
             <input class="hidden" type="hidden" ng-model="mailchimp.dc" ng-init="mailchimp.dc='us9'">
             <input class="hidden" type="hidden" ng-model="mailchimp.u" ng-init="mailchimp.u='2b76757d9b200f72632d7330a'">
             <input class="hidden" type="hidden" ng-model="mailchimp.id" ng-init="mailchimp.id='148fb5f948'">
             <input style="color: black;" class="left" type="email" name="email" ng-model="mailchimp.email" placeholder="hacker@sdhacks.io" required>
-            <button class="right" ng-disabled="MailchimpSubscriptionForm.$invalid" ng-click="addSubscription(mailchimp)">I'm ready</button>
+            <button class="right" ng-disabled="MailchimpSubscriptionForm.$invalid" ng-click="addSubscription(mailchimp);">I'm ready</button>
           </div>
 
           <!-- Show error message if MailChimp unsuccessfully added the email to the list. -->

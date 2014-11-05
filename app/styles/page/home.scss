@@ -63,6 +63,12 @@
     font-weight: bold;
   }
 
+  //Change button to be grey when the form is disabled/invalid
+  button:disabled{
+    background-color: #717171;
+  }
+  /*
+  //WTF is this selector for?
   .actions {
     margin: 2em auto;
 
@@ -76,8 +82,9 @@
       font-size: 1.4em;
       text-transform: uppercase;
 
+
     }
-  }
+  }*/
 
   .socialicons {
     font-size: 3em;
@@ -114,26 +121,29 @@
 #subscribe {
   background-color: rgba(255,255,255,.5);
 
-  .left {
+  #subscriptionInputs{
+    @include row();
+    .left {
 
-    @include span-columns(13 of 16);
-    @include shift(0 of 16);
-
-    //Scale the subscribe boxes on mobile
-    @media screen and (max-width: 800px) {
-      @include span-columns(9 of 16);
+      @include span-columns(13 of 16);
       @include shift(0 of 16);
+
+      //Scale the subscribe boxes on mobile
+      @media screen and (max-width: 800px) {
+        @include span-columns(9 of 16);
+        @include shift(0 of 16);
+      }
+
     }
 
-  }
+    .right {
 
-  .right {
+      @include span-columns(3 of 16);
 
-    @include span-columns(3 of 16);
-
-    //Scale the subscribe boxes on mobile
-    @media screen and (max-width: 800px) {
-      @include span-columns(7 of 16);
+      //Scale the subscribe boxes on mobile
+      @media screen and (max-width: 800px) {
+        @include span-columns(7 of 16);
+      }
     }
   }
 }
