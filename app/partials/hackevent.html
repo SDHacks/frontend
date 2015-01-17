@@ -1,0 +1,18 @@
+<div id="hackevent">
+  <div class="content">
+    <div class="container">
+      <div class="logos" ng-class="{'scaled':displayMessage}">
+        <img id="logo" src="images/logo.png" alt="SD Hacks">
+        <img id="tesc_logo" src="images/tesc_logo.png">
+      </div>
+      <div id="message" ng-class="{'clear':!displayMessage}">
+        <div ng-bind-html="result.data[result.data.length-1]"></div>
+      </div>
+    </div>
+  </div>
+  <!-- Notification Sound Youtube Vid -->
+  <embed id="my-video" style="position: absolute; top: 0; left: 0;" width="0%" height="0%" frameborder="0"
+         webkitallowfullscreen mozallowfullscreen allowfullscreen allowfullscreen="true" allowscriptaccess="always"
+         quality="high" bgcolor="#000000" name="my-video" style="" src="http://www.youtube.com/v/FgcB7Lkvp44?enablejsapi=1&version=3&playerapiid=ytplayer"
+         type="application/x-shockwave-flash">
+</div>

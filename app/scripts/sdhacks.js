@@ -9,8 +9,13 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', functio
       url: '/',
       templateUrl: 'partials/main.html',
       controller: 'MainCtrl'
+    })
+    .state('hackevent', {
+      url: '/hackevent',
+      templateUrl: 'partials/hackevent.html',
+      controller: 'HackEventCtrl'
     });
-    //.state('home.contact', {
+    // .state('home.contact', {
     //  url: '',
     //  templateUrl: 'partials/contact/form.html'
     //})

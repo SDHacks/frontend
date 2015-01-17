@@ -1,0 +1,62 @@
+// Styles for hackevent (hack night/stuffs) page
+
+#hackevent {
+  @include fill-parent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  min-height: 100%;
+  background-image: url('../images/sd_bg_gradient.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+
+  //Scale Text on Mobile
+  @media screen and (max-width: 800px) {
+    font-size: 12px;
+  }
+
+  .content {
+    @include fill-parent;
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 6%;
+    background-color: rgba(75, 75, 125, .15);
+  }
+
+  .logos{
+    transition: transform 1s ease-in;
+    #logo {
+      max-height: 50vh;
+      margin-bottom: 10px;
+    }
+
+    #tesc_logo{
+      max-height: 14vh;
+      padding-left: 10%;
+    }
+
+    //Scale image to make way for message
+    &.scaled{
+      transform: scale(0.5) translate(0, -25vh);
+    }
+  }
+
+  #message{
+    @include span-columns(12 of 16);
+    @include shift(2 of 16);
+    background-color: rgba(0,0,0,.5);
+    padding: 1.8em;
+    position: relative;
+    transform: translate(0, -21vh);
+    transition: opacity 1s ease-in;
+
+    //Clear Message
+    &.clear{
+      opacity: 0;
+    }
+  }
+
+}

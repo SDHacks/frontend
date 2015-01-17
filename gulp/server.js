@@ -22,13 +22,16 @@ function proxyMiddleware(req, res, next) {
 }
 
 function browserSyncInit(baseDir, files, browser) {
+
+    var historyApiFallback = require('connect-history-api-fallback')
+
   browser = browser === undefined ? 'default' : browser;
 
   browserSync.instance = browserSync.init(files, {
     startPath: '/index.html',
     server: {
       baseDir: baseDir,
-      middleware: proxyMiddleware
+      middleware: historyApiFallback//proxyMiddleware
     },
     browser: browser
   });

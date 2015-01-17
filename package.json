@@ -1,7 +1,9 @@
 {
   "name": "SDHacks",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "connect-history-api-fallback": "0.0.5"
+  },
   "devDependencies": {
     "gulp": "^3.6.0",
     "gulp-autoprefixer": "^0.0.6",
@@ -36,8 +38,7 @@
     "gulp-protractor": "0.0.7",
     "gulp-plumber": "^0.6.3",
     "protractor": "^1.0.0",
-    "uglify-save-license": "^0.4.1",
-    "gulp-ruby-sass": "^0.4.3"
+    "uglify-save-license": "^0.4.1"
   },
   "engines": {
     "node": ">=0.10.0"
